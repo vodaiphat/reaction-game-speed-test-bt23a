@@ -1,0 +1,158 @@
+
+/* Thiết lập chung cho toàn bộ trang */
+* {
+    box-sizing: border-box;
+}
+
+/* Định dạng trang web */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #141e30, #243b55);
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 30px 15px;
+}
+
+/* Tiêu đề */
+h1 {
+    color: #38e8ff;
+    margin-bottom: 10px;
+}
+
+/* Mô tả */
+.description {
+    color: #cbd5e1;
+    margin-bottom: 25px;
+}
+
+/* Khu vực điểm số và thời gian */
+.info {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+/* Hộp thông tin */
+.info-box {
+    background: #ffffff18;
+    border: 1px solid #ffffff30;
+    border-radius: 12px;
+    padding: 15px 30px;
+    min-width: 140px;
+}
+
+/* Tiêu đề hộp thông tin */
+.info-box h3 {
+    margin: 0 0 8px;
+    font-size: 15px;
+    color: #a5f3fc;
+}
+
+/* Giá trị điểm và thời gian */
+.info-box span {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* Khu vực chọn thời gian */
+.settings {
+    margin: 15px 0;
+}
+
+select {
+    padding: 8px 15px;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+/* Khu vực trò chơi */
+#arena {
+    width: 600px;
+    height: 400px;
+    max-width: 100%;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+    background: #e2e8f0;
+    border: 4px solid #38e8ff;
+    border-radius: 15px;
+    cursor: crosshair;
+}
+
+/* Mục tiêu hình tròn */
+#target {
+    width: 35px;
+    height: 35px;
+    background: #ef4444;
+    border: 3px solid white;
+    border-radius: 50%;
+    position: absolute;
+    display: none;
+    cursor: pointer;
+    box-shadow: 0 0 15px #ef4444;
+}
+
+/* Khu vực các nút */
+.buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 22px;
+}
+
+/* Thiết kế nút */
+button {
+    padding: 13px 22px;
+    border: none;
+    border-radius: 10px;
+    background: #06b6d4;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Hiệu ứng khi di chuột vào nút */
+button:hover {
+    background: #0891b2;
+}
+
+/* Nút bị khóa */
+button:disabled {
+    background: #64748b;
+    cursor: not-allowed;
+}
+
+/* Thông tin người chơi */
+#playerInfo {
+    margin-top: 18px;
+    color: #38e8ff;
+    font-weight: bold;
+}
+
+/* Thông báo trò chơi */
+#message {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #fde68a;
+    font-weight: bold;
+}
+
+/* Giao diện điện thoại */
+@media (max-width: 640px) {
+    #arena {
+        height: 350px;
+    }
+
+    .info {
+        gap: 8px;
+    }
+
+    .info-box {
+        min-width: 0;
+        padding: 12px;
+    }
+}
